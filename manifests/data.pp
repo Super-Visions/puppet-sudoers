@@ -33,7 +33,7 @@ class sudoers::data {
   {
     ubuntu, debian: {
       $sudoers_package     = 'sudo'
-      $sudoers_config_file = '/etc'
+      $sudoers_config_file = '/etc/sudoers'
     }
     centos, redhat: {
       $sudoers_package     = 'sudo'
