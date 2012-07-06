@@ -2,6 +2,8 @@ sudoers
 
 This is the sudoers module.
 
+This is based on https://github.com/windowsrefund/puppet-sudoers
+
 License
 -------
 
