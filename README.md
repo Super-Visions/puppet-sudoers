@@ -27,7 +27,7 @@ Hiera file e.g. `Debian.yaml`
 
 ## License
 
-GNU-GPLv3 see GNU-GPL.txt or <http://www.gnu.org/licenses/>.
+[GNU-GPLv3](https://github.com/deric/puppet-sudoers/blob/master/GNU-GPL.txt)
 
 ## Contact
 
