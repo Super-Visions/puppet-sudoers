@@ -7,7 +7,8 @@ summary 'sudoers management'
 description 'sudoers installation and configuration module'
 project_page 'https://github.com/Super-Visions/puppet-sudoers'
 
-requires Hiera, Hiera-Puppet
+# is no supported by puppet-librarian
+#requires Hiera, Hiera-Puppet
 
 ## Add dependencies, if any:
 # dependency 'username/name', '>= 1.2.0'
