@@ -1,8 +1,29 @@
-# puppet-sudoers
+# Puppet module: sudoers
 
 This is the sudoers module.
 
 This is based on https://github.com/windowsrefund/puppet-sudoers
+
+## Usage
+
+`manifests/nodes.pp`:
+
+    class {'sudoers': }
+
+
+Hiera file e.g. `Debian.yaml`
+ 
+    sudoers_package: 'sudo'
+    sudoers_config_file: '/etc/sudoers'
+    sudoers_rules:
+      someuser:
+        ensure: present
+        nopasswd: 'true'
+        commands: ls
+      '%sudo':
+        ensure: present # or absent
+        commands: ALL
+
 
 ## License
 
