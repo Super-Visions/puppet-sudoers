@@ -25,6 +25,19 @@ sudoers::rules:
     commands: ALL
 ```
 
+in Puppet config:
+
+```puppet
+class {'sudoers':
+  rules => {
+    'myuser' => {
+      ensure   => 'present',
+      commands => 'ls'
+    }
+  }
+}
+```
+
 ## License
 
 [GNU-GPLv3](https://github.com/deric/puppet-sudoers/blob/master/GNU-GPL.txt)
