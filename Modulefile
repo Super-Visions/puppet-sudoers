@@ -1,16 +1,10 @@
-name    'puppet-sudoers'
+name    'deric-sudoers'
 version '0.0.2'
-source 'https://github.com/Super-Visions/puppet-sudoers'
-author 'Super-Visions'
+source 'https://github.com/deric/puppet-sudoers.git'
+author 'deric'
 license 'GNU LESSER GENERAL PUBLIC LICENSE, Version 3'
 summary 'sudoers management'
 description 'sudoers installation and configuration module'
-project_page 'https://github.com/Super-Visions/puppet-sudoers'
-
-# is no supported by puppet-librarian
-#requires Hiera, Hiera-Puppet
-
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+project_page 'https://github.com/deric/puppet-sudoers.git'
 
 dependency 'puppetlabs/stdlib', '>= 2.1.0'
