@@ -1,6 +1,6 @@
 # Puppet module: sudoers
 
-Module for mamaging sudoers file.
+Module for managing sudoers file.
 
 ## Usage
 
