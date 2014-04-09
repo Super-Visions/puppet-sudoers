@@ -1,5 +1,5 @@
 name    'puppet-sudoers'
-version '0.0.1'
+version '0.0.2'
 source 'https://github.com/Super-Visions/puppet-sudoers'
 author 'Super-Visions'
 license 'GNU LESSER GENERAL PUBLIC LICENSE, Version 3'
