@@ -1,4 +1,5 @@
-# Puppet module: sudoers
+# Puppet Sudoers
+[![Build Status](https://travis-ci.org/deric/puppet-sudoers.svg?branch=master)](https://travis-ci.org/deric/puppet-sudoers)
 
 Module for managing sudoers file.
 
