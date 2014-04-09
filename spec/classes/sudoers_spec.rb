@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'shared_context'
 
 describe 'sudoers' do
   shared_examples 'debian-system' do |os, codename|
@@ -8,9 +9,17 @@ describe 'sudoers' do
       :lsbdistcodename => codename,
     }}
 
+    let(:params) {{
+      :rules => {
+        'john' => {}
+      }
+    }}
+
     it { should contain_package('sudo').with(
       :ensure => 'present'
     )}
+
+    it { should contain_sudoers('john') }
 
   end
 
