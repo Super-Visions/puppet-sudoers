@@ -13,9 +13,8 @@ class {'sudoers': }
 Hiera file e.g. `Debian.yaml`
 
 ```yaml
-    sudoers_package: 'sudo'
-    sudoers_config_file: '/etc/sudoers'
-    sudoers_rules:
+    sudoers::package: 'sudo'
+    sudoers::rules:
       someuser:
         ensure: present
         nopasswd: 'true'
