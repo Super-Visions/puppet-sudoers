@@ -13,15 +13,15 @@ class {'sudoers': }
 Hiera file e.g. `Debian.yaml`
 
 ```yaml
-    sudoers::package: 'sudo'
-    sudoers::rules:
-      someuser:
-        ensure: present
-        nopasswd: 'true'
-        commands: ls
-      '%sudo':
-        ensure: present # or absent
-        commands: ALL
+sudoers::package: 'sudo'
+sudoers::rules:
+  someuser:
+    ensure: present
+    nopasswd: 'true'
+    commands: ls
+  '%sudo':
+    ensure: present # or absent
+    commands: ALL
 ```
 
 ## License
