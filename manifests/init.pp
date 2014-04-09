@@ -33,27 +33,29 @@ class sudoers(
   if $package == undef {
     case $::operatingsystem {
       ubuntu, debian: {
-        $package     = 'sudo'
-        $config_file = '/etc/sudoers'
+        $package_name = 'sudo'
+        $config_file  = '/etc/sudoers'
       }
       centos, redhat: {
-        $package     = 'sudo'
-        $config_file = '/etc/sudoers'
+        $package_name = 'sudo'
+        $config_file  = '/etc/sudoers'
       }
       default: {
         fail("Unknown OS: $::operatingsystem, you have to specify $package param")
       }
     }
+  } else {
+    $package_name = $package
   }
 
-  package { $package:
+  package { $package_name:
     ensure  => $ensure,
     require => Anchor['sudoers::start']
   }
 
   if($rules) {
     create_resources(sudoers, $rules, {
-      'require' => Package[$package],
+      'require' => Package[$package_name],
       'before'  => Anchor['sudoers::end']
     })
   }
